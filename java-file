@@ -1,7 +1,7 @@
 import com.sun.net.httpserver.HttpServer;
 import java.io.OutputStream;
 
-public class Hello {
+public class hello {
     public static void main(String[] args) throws Exception {
         HttpServer server = HttpServer.create(new java.net.InetSocketAddress(8080), 0);
 
