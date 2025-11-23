@@ -33,7 +33,7 @@ jobs:
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: arn:aws:iam::630398150799:role/github-access
+          role-to-assume: arn:aws:iam::779846824010:role/java-role
           aws-region: us-east-1
 
       - name: Login to Amazon ECR
@@ -45,8 +45,8 @@ jobs:
 
       - name: Tag image for ECR
         run: |
-          docker tag hello-app:latest 630398150799.dkr.ecr.us-east-1.amazonaws.com/java-repo:latest
+          docker tag hello-app:latest 779846824010.dkr.ecr.ap-south-1.amazonaws.com/java-repo:latest
 
       - name: Push image to ECR
         run: |
-          docker push 630398150799.dkr.ecr.us-east-1.amazonaws.com/java-repo:latest
+          docker push 779846824010.dkr.ecr.ap-south-1.amazonaws.com/java-repo:latest
