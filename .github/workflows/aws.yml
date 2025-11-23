@@ -34,7 +34,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::779846824010:role/java-role
-          aws-region: ap-south-1 #change
+          aws-region: ap-south-1 
 
       - name: Login to Amazon ECR
         uses: aws-actions/amazon-ecr-login@v2
@@ -45,8 +45,8 @@ jobs:
 
       - name: Tag image for ECR
         run: |
-          docker tag hello-app:latest 779846824010.dkr.ecr.ap-south-1.amazonaws.com/java-repo:latest   #change
+          docker tag hello-app:latest 779846824010.dkr.ecr.ap-south-1.amazonaws.com/java-repo:latest   
 
       - name: Push image to ECR
         run: |
-          docker push 779846824010.dkr.ecr.ap-south-1.amazonaws.com/java-repo:latest   #change
+          docker push 779846824010.dkr.ecr.ap-south-1.amazonaws.com/java-repo:latest   
